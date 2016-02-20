@@ -4,3 +4,4 @@ djangoenv
 db.sqlite3
 /static
 .DS_Store
+materialize-v0.97.5.zip
