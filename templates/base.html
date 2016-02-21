@@ -14,8 +14,10 @@
     <body>
       <nav class="indigo">
         <ul class="right hide-on-med-and-down">
-          <li><a href="#!">First Sidebar Link</a></li>
-          <li><a href="#!">Second Sidebar Link</a></li>
+          {% if user.is_authenticated %}
+            <li><a href="{% url 'post_new' %}">New Post</a></li>
+            <li><a href="{% url 'poll_new' %}">New Poll</a></li>
+          {% endif %}
         </ul>
         <ul id="slide-out" class="side-nav">
           {% if user.is_authenticated %}
