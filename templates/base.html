@@ -16,7 +16,10 @@
          <div class="nav-wrapper indigo">
             <a href="#" class="brand-logo">Logo</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-              <li><a href="sass.html">Sass</a></li>
+              {% if user.is_authenticated %}
+                <li><a href="{% url 'post_new' %}">New Post</a></li>
+              {% endif %}
+              <li><a href="{% url 'poll_new' %}">New Poll</a></li>
               <li><a href="badges.html">Components</a></li>
               <li><a href="collapsible.html">JavaScript</a></li>
             </ul>
