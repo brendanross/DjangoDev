@@ -17,39 +17,25 @@
           {% if user.is_authenticated %}
             <li><a href="{% url 'post_new' %}">New Post</a></li>
             <li><a href="{% url 'poll_new' %}">New Poll</a></li>
+            <li><a href="/logout/">Logout</a></li>
+          {% else %}
+            <li><a href="/login/">Login</a></li>
           {% endif %}
         </ul>
         <ul id="slide-out" class="side-nav">
           {% if user.is_authenticated %}
             <li><a href="{% url 'post_new' %}">New Post</a></li>
             <li><a href="{% url 'poll_new' %}">New Poll</a></li>
+            <li><a href="/logout/">Logout</a></li>
+          {% else %}
+            <li><a href="/login/">Login</a></li>
           {% endif %}
           <li><a href="/poll/">Poll</a></li>
           <li><a href="/">Blog</a></li>
         </ul>
         <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
       </nav>
-<!--       <nav>
-        <div class="nav-wrapper">
-          <a href="#!" class="brand-logo">Logo</a>
-          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-          <ul class="right hide-on-med-and-down">
-              <li><a href="#">Page</a></li>
-              {% if user.is_authenticated %}
-                <li><a href="{% url 'post_new' %}">New Post</a></li>
-                <li><a href="{% url 'poll_new' %}">New Poll</a></li>
-              {% endif %}
-              
-          </ul>
-          <ul class="side-nav" id="mobile-demo">
-            <li><a href="#">Page</a></li>
-            {% if user.is_authenticated %}
-                <li><a href="{% url 'post_new' %}">New Post</a></li>
-                <li><a href="{% url 'poll_new' %}">New Poll</a></li>
-            {% endif %}
-          </ul>
-        </div>
-      </nav> -->
+      
         <div class="content container">
             <div class="row">
                 <div class="col-md-8">
